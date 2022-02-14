@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <form action="{% url 'result' %}">
+        <label for="keys">Choose a key:</label>
+
+        <select name="keys" id="keys">
+            {% for d in listings%}
+            <option value="{{d.Key}}">{{d.Key}}</option>
+            {%endfor%}
+        </select>
+        <button type="submit">Search</button>
+    </form>
+    </body>
+</html>
